@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cbn1 {
+            background: transparent;
+            padding: 7px;
+            border-color: dodgerblue;
+            color: white;
+            transition: 1s;
+        }
+
+        .cbn1:hover {
+            background-color: #fff;
+            color: black;
+        }
+
+        .containers {
+            background-image: url(./public/images/electric\ 3.jpeg);
+            width: 100%;
+            height: 550px;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #custom li a {
+            color: white;
+        }
+
+        .navbar-brand {
+            /* color: white; */
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .navbar-brand span {
+            border: 1px solid gray;
+            padding: 0 7px;
+        }
+
+        .banner-text {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            /* border: 1px solid green; */
+        }
+
+        .banner-img {
+            height: 300px;
+        }
+
+        /* .banner{
+            display: flex;
+            justify-content: space-between;
+        } */
+        .csb {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 13px;
+            font-weight: bold;
+            box-shadow: inset(5px 5px 10px gray);
+            transition: 1s;
+            /* background-color: rgba(201, 197, 197, 0.3); */
+
+        }
+
+        .csb:hover {
+            background-color: white;
+            color: black;
+
+        }
+
+        .main-complete {
+            background-color: orange;
+        }
+
+        .comeplete {
+
+            /* margin-top: 40px; */
+            margin: auto;
+
+            width: 70%;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* 3 section start----------------------------------------- */
+
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* background-color: black; */
+        }
+
+        .third-box {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            color: white;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+
+        }
+
+        .third-box span {
+            font-size: 60px;
+            color: orange;
+        }
+
+        .third-box div {
+            background-color: rgba(55, 31, 179, 0.3);
+            width: 30%;
+            box-shadow: inset 0px 0px 11px white;
+            text-align: center;
+            position: relative;
+            transition: 3s;
+        }
+
+        /* 3 section end----------------------------------------- */
+
+        /* 4 section  start   about-me */
+
+        .about-me {
+            background-image: url(./public/images/4kimg.jpeg);
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-me h1 {
+            font-size: 60px;
+            text-shadow: 3px 3px 20px gray;
+            margin-left: 20px;
+        }
+
+        .about-me p {
+            font-size: 20px;
+            margin-left: 16px;
+            color: whitesmoke;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* 4 section  end  about-me */
+
+        /* ection 6 howver effect card  start  */
+        .container2 {
+            /* margin: 35px; */
+            width: 100%;
+        }
+
+        .section6 {
+            /* background-color: darkblue; */
+        }
+
+        .ran {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-left: -0.5;
+        }
+
+        .image {
+            background-color: rgb(0, 0, 0);
+            position: relative;
+            flex: 1;
+            max-width: 460px;
+            height: 300px;
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .image img {
+            opacity: 0.5;
+            position: relative;
+            vertical-align: top;
+            transition: 0.6s;
+            transition-property: opacity;
+        }
+
+        .image:hover img {
+            opacity: 1;
+        }
+
+        .image .details {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #fff;
+            width: 100%;
+        }
+
+        .image .details h2 {
+            text-align: center;
+            font-size: 35px;
+            text-transform: uppercase;
+            margin-top: 60px;
+            transition: 0.6s;
+            transition-property: transform;
+        }
+
+        .image:hover .details h2 {
+            transform: translateY(-30px);
+        }
+
+        .image .details p {
+            text-align: center;
+            margin: 30px 20px 0 30px;
+            opacity: 0;
+            transition: 0.6s;
+            transition-property: transform;
+            /* font-size:10px; */
+        }
+
+        .image:hover .details p {
+            opacity: 1;
+            transform: translateY(-40px);
+        }
+
+        .more {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            padding: 10px;
+            bottom: -190px;
+            transition: 0.6s;
+
+        }
+
+        .image:hover .more {
+            bottom: -100px;
+
+        }
+
+        .icon-link span {
+            color: blue;
+            padding: 5px;
+        }
+
+        /* ection 6 howver effect card  end  */
+
+        section {}
+
+        section h1 {
+            text-align: center;
+            font-weight: bold;
+            color: orange;
+            text-transform: uppercase;
+        }
+
+        section h1::after {
+            content: '';
+            display: block;
+            background-color: orange;
+            width: 170px;
+            height: 3px;
+            margin: 20px auto;
+        }
+
+        .col-md-4 {
+            margin: 40px auto;
+            border-top-left-radius: 30%;
+
+        }
+
+        section .profile {
+            /* padding: 70px 10px 10px; */
+            background-color: #efefef;
+            border-top-left-radius: 30%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            box-shadow: 3px 3px 3px black;
+
+        }
+
+        .profile img {
+            width: 100px;
+            border-radius: 50%;
+            margin-top: -50px;
+            border: 1px solid white;
+        }
+
+        .profile p {
+            text-align: justify;
+            padding: 20px;
+            line-height: 19px;
+            color: black;
+        }
+        .container12{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .container12 .nothing{
+            /* text-align: center; */
+           
+            background-image: url(./public/images/software.jpg);
+            height: 350px;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            align-items: center;
+        }
+
+        .container12 .nothing{
+            border-bottom: 4px solid rgb(0, 255, 89);
+            width: 19%;
+            height: 170px;
+            box-shadow: 3px 6px 4px rgb(0, 0, 0);
+            background-color: rgba(17, 36, 249, 0.5);
+            padding-left:10px;
+        }
+
+        /* .container12 .nothing span,
+        p {
+            margin-left: 25px;
+            position: relative;
+            top: 10px;
+        } */
+
+        .bi-lightbulb {
+            font-size: 38px;
+            color: aqua;
+        }
+
+        .bi-credit-card-2-front {
+            font-size: 38px;
+            color: darkblue;
+        }
+
+        .bi-file-text {
+            font-size: 38px;
+            color: brown;
+        }
+
+        .bi-microsoft {
+            font-size: 38px;
+            color: rgb(0, 255, 89);
+        }
+        .bi-union{
+            color: rgb(11, 173, 243);
+            font-size: 38px;
+        }
+
+        .nothing p {
+            font-size: 23px;
+            color: white;
+        }
+        footer{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            background-color: coral;
+            border-top: 8px solid rgb(219, 49, 49);
+        }
+        li{
+            display: flex;
+        }
+        ol,ul{
+            padding-left: 0px;
+        }
+        footer h2::after {
+            content: '';
+            display: block;
+            background-color: rgb(255, 251, 242);
+            width: 80px;
+            height: 3px;
+            margin-top: 10px;
+        }
+        .bi-facebook, .bi-twitter, .bi-youtube, .bi-instagram, .linkdin{
+            padding: 10px;
+            border: 1px solid rgb(232, 230, 230);
+            border-radius: 50%;
+        }
+
+        @media screen and (orientation:portrait) {
+
+            /* 3 section----------------start--------------------------- */
+            .container1 {
+                display: block;
+            }
+
+            .third-box {
+                display: block;
+                width: 100%;
+            }
+
+            .third-box div {
+                width: 100%;
+            }
+
+            /* 3 section----------------end--------------------------- */
+
+
+            /* 4 section----------------start--------------------------- */
+            .about-me h1 {
+                font-size: 35px;
+                text-shadow: 3px 3px 20px gray;
+                margin-left: 5px;
+            }
+
+            .about-me p {
+                font-size: 15px;
+                margin-left: 5px;
+            }
+
+            .ran {
+                display: block;
+            }
+            .container12 {
+                display: block;
+                height: auto;
+            }
+
+            .container12 .nothing{
+                width: 100%;
+                margin-top: 16px;
+            }
+            footer{
+            display: grid;
+            grid-template-columns: 6fr;
+            background-color: coral;
+            border-top: 8px solid rgb(219, 49, 49);
+            padding-left: 15px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="containers">
+
+        <nav class="navbar navbar-expand-lg  p-0 m-0">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">
+                    <img src="./public/images/SIOV_FullLogo_Co.png" class="d-inline-block" width="100" height="60"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-danger"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-4 mb-lg-0" id="custom">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <!-- <div> -->
+                        <button class="btn btn-danger w-100">About</button>
+                        <!-- </div> -->
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- <div class="banner"> -->
+        <div class="banner-text m-3">
+            <h1 class="text-white">I,AM BALARAM AMBANI<BR>A FRONTEND-DEVLOPER </h1>
+            <p class="text-white">A NEW WORK FROM <span>COLORLIB</span></p>
+            <div>
+                <button class="csb me-3">START A PROJECT</button>
+                <button class="csb">ABOUT US</button>
+            </div>
+        </div>
+        <!-- </div> -->
+
+    </div>
+
+    
+
+    <div class="main-complete ">
+        <div class="comeplete">
+            <p class="">EXCLUSIVE STUNNING FEATURES</p>
+            <h1>A Complete Software Based Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <button class="cbn1">START A FREE TRIAL NOW!</button>
+        </div>
+    </div>
+
+    <div class="container12">
+        <div class="nothing">
+            <span class="bi bi-lightbulb"></span>
+            <P>Graphic Design</P>
+        </div>
+        <div class="nothing">
+            <span class="bi bi-credit-card-2-front"></span>
+            <P>Web Design</P>
+        </div>
+        <div class="nothing">
+            <span class="bi bi-file-text"></span>
+            <P>Application</P>
+        </div>
+        <div class="nothing">
+            <span class="bi bi-microsoft"></span>
+            <P>Software</P>
+        </div>
+        <div class="nothing">
+            <span class="bi bi-union"></span>
+            <P>Software</P>
+        </div>
+
+    </div>
+
+    <!-- 3 section----------------start----------------------------------------- -->
+    <div class="container1">
+        <div class="third-box">
+            <div>
+                <span class="bi bi-boxes"></span>
+                <h1 class="mt-2">UX/UI Design</h1>
+                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ea laboriosam rem
+                    vero
+                    voluptas. .</p>
+            </div>
+            <div>
+                <span class="bi bi-boxes"></span>
+                <h1 class="mt-2">UX/UI Design</h1>
+                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ea laboriosam rem
+                    vero
+                    voluptas. .</p>
+            </div>
+            <div>
+                <span class="bi bi-boxes"></span>
+                <h1 class="mt-2">UX/UI Design</h1>
+                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ea laboriosam rem
+                    vero
+                    voluptas. .</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 4 about me start -->
+    <div class="about-me text-white">
+        <h1>I’m Oluwakemi Adeleke</h1>
+        <p> a professional and talented Product Designer</p>
+    </div>
+    <!-- section 4 about me end-->
+
+    <!-- section 5 owl  start -->
+    <div class="container34 pt-4">
+
+        <div class="owl-carousel">
+
+            <div> <img src="./public/images/boomer 1.jpg" width="100" data-bs-interval="4000" alt=""> </div>
+
+            <div> <img src="./public/images/boomer 2.jpg" width="100%" alt=""> </div>
+
+            <div> <img src="./public/images/boomer 3.jpg" width="100%" alt=""> </div>
+
+            <div> <img src="./public/images/boomer 4.jpg" width="100%" alt=""> </div>
+
+            <div> <img src="./public/images/boomer 2.jpg" width="100%" alt=""> </div>
+
+            <div> <img src="./public/images/boomer 5.jpg" width="100%" alt=""> </div>
+
+            <div> <img src="./public/images/boomer 2.jpg" width="100%" alt=""> </div>
+
+        </div>
+
+        <!-- section 5 owl  end -->
+
+
+
+    </div>
+
+    <!-- section 6 howver effect card  start -->
+    <div class="section6">
+        <div class="container2">
+            <div class="ran">
+                <div class="image">
+                    <img src="./public/images/portfolio si2.png" width="428" height="400">
+                    <div class="details">
+                        <h2>Your<span class="text-danger">Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolor mollitia ipsam
+                            voluptatum</p>
+                        <div class="more">
+                            <div><a href="#" class="read-more">Read <span>more</span></a></div>
+                            <div class="icon-link">
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="image">
+                    <img src="./public/images/portfolio si3.png" width="428" height="400">
+                    <div class="details">
+                        <h2>Your<span class="text-danger">Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolor mollitia ipsam
+                            voluptatum</p>
+                        <div class="more">
+                            <a href="#" class="read-more">Read <span>more</span></a>
+                            <div class="icon-link">
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image">
+                    <img src="./public/images/portfolio si4.png" width="428" height="400">
+                    <div class="details">
+                        <h2>Your<span class="text-danger">Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolor mollitia ipsam
+                            voluptatum</p>
+                        <div class="more">
+                            <a href="#" class="read-more">Read <span>more</span></a>
+                            <div class="icon-link">
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                                <span class="bi bi-heart-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section 6 howver effect card  end-->
+
+    <!-- section 7  card  start-->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <h1>Testimonial</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+            </div>
+            <div class="row ranjan">
+                <div class="col-md-4">
+                    <div class="profile text-center">
+                        <img src="../public/images/avatar-0.jpg">
+                        <blockquote>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam assumenda quo tempora.
+                                Quisquam similique omnis incidunt architecto eligendi, aspernatur vero eius delectus
+                                odio, sapiente beatae corporis voluptatum quasi veritatis distinctio.</p>
+                        </blockquote>
+                        <h3>Avinash Kar</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="profile text-center">
+                        <img src="../public/images/avatar-0.jpg">
+                        <blockquote>
+                            <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                                assumenda quo tempora. Quisquam similique omnis incidunt architecto eligendi, aspernatur
+                                vero eius delectus odio, sapiente beatae corporis voluptatum quasi veritatis distinctio.
+                            </p>
+                        </blockquote>
+                        <h3>Avinash Kar</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="profile text-center">
+                        <img src="../public/images/avatar-0.jpg">
+                        <blockquote>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam assumenda quo tempora.
+                                Quisquam similique omnis incidunt architecto eligendi, aspernatur vero eius delectus
+                                odio, sapiente beatae corporis voluptatum quasi veritatis distinctio.</p>
+                        </blockquote>
+                        <h3>Avinash Kar</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h2>About Us</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt impedit perferendis nam, velit dolor, enim placeat officia natus a ipsam sint, ratione nobis atque temporibus iste repudiandae possimus labore. Labore!</p>
+            <span class="bi bi-facebook"></span>
+            <span class="bi bi-twitter"></span>
+            <span class="bi bi-youtube"></span>
+            <span class="bi bi-instagram"></span>
+            <span class="bi bi-linkedin"></span>
+        </div>
+        <div>
+            <h2>Get In Touch</h2>
+            <ul>
+                <li>
+                    <span class="bi bi-map"></span>
+                    <p>123 street,New York ,USA</p>
+                </li>
+                <li>
+                    <span class="bi bi-telephone-fill"></span>
+                    <p>+91-7504308672</p>
+                </li>
+                <li>
+                    <span class="bi bi-envelope"></span>
+                    <p>info@balaramsahu606@gmail.com</p>
+                </li>
+                <li>
+                    <span class="bi bi-smartwatch"></span>
+                    <p>Mon-Fri,9AM-10PM</p>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Useful Links</h2>
+            <ul>
+                <li>
+                    <span class="bi bi-chevron-right"></span>
+                    <p>JAVA DEVLOPER</p>
+                </li>
+                <li>
+                    <span class="bi bi-chevron-right"></span>
+                    <P>.NET DEVLOPER</P>  
+                </li>
+                <li>
+                    <span class="bi bi-chevron-right"></span>
+                    <P>REACT DEVLOPER</P>
+                </li>
+                <li>
+                    <span class="bi bi-chevron-right"></span>
+                    <P>ANGULAR DEVLOPER</P>
+                </li>
+                <li>
+                    <span class="bi bi-chevron-right"></span>
+                    <P>ANGULAR DEVLOPER</P>
+                </li>
+                <li>
+                    <span class="bi bi-chevron-right"></span>
+                    <P>.NET DEVLOPER</P>  
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Latest Project</h2>
+            <div>
+                <img src="./public/images/portfolio si.png" width="60px" height="60px">
+                <img src="./public/images/portfolio si1.png" width="60" height="60">
+                <img src="./public/images/portfolio si3.png" width="60" height="60">
+                <img src="./public/images/portfolio si4.png" width="60" height="60">
+            </div>
+            <div class="mt-2">
+                <img src="./public/images/boomer 1.jpg" width="60px" height="60px">
+                <img src="./public/images/boomer 2.jpg" width="60" height="60">
+                <img src="./public/images/boomer 3.jpg" width="60" height="60">
+                <img src="./public/images/boomer 5.jpg" width="60" height="60">
+            </div>
+            <form class="input-group mt-2 w-75 mb-3">
+                <span class="bi bi-person input-group-text"></span>
+                <input type="text" class="form-control">
+            </form>
+        </div>
+    </footer>
+
+    
+
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+<script src="owlcarousel/owl.carousel.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('.owl-carousel').owlCarousel({
+
+            loop: true,
+
+            autoplay: true,
+
+            autoplayTimeout: 2000,
+
+            margin: 10,
+
+            lazyLoad: true,
+
+            nav: true, // if you follow the step no. 5 then only include this
+
+            navText: ["<button class='text-center btn btn-outline-info btn-md'><</button>", "<button class='text-center btn btn-outline-info btn-md'>></button>"], // if you follow the step no. 5 then only include this
+
+            autoplayHoverPause: false,
+
+            responsive: {
+
+                0: {
+
+                    items: 1
+
+                },
+
+                600: {
+
+                    items: 2
+
+                },
+
+                1000: {
+
+                    items: 3
+
+                }
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</html>
